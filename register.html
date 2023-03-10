@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+
+        <style>
+           div {
+            border: 3px solid rgb(161, 32, 66);
+            height: 450px;
+            background-color: bisque;
+            position: relative;
+            
+           }
+           form {
+            background-color: rgb(178, 34, 159);
+            margin :5px auto;
+            text-align: center;
+            
+           }
+           h2 {
+            color: azure;
+            text-shadow: 1px 1px thistle;
+            transition: all 1s;
+            
+            
+           }
+
+           h3 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 5px;
+           }
+
+           h2:hover {
+            background-color: aliceblue;
+            color: brown;
+           }
+
+           input {
+            border-radius: 50px;
+           }
+
+           .btn {
+            font-size: 15px;
+            font-weight: bold;
+            transition: all 1s;
+            background: linear-gradient(to left,#e91e63,#f44336);
+            
+           }
+
+           .btn:hover {
+            cursor: pointer;
+            background-color: firebrick;
+            font-size: 25px;
+            color: aliceblue;
+            box-shadow: 10px 10px 25px yellow;
+           }
+
+           ul {
+            list-style-type: none;
+            background-color:burlywood;
+            
+           }
+
+           li {
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 1px;
+            color: white;
+            margin-bottom: 5px;
+            font-size: 20px;
+
+           }
+
+           
+           
+           
+           
+            
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h3>Please fill out the form below :</h1>
+        <form>
+            <h2>Register Here</h2>
+        
+            <input type="text" id="user" placeholder="Enter Your Name" required>
+            
+            
+        </br>
+    </br>
+
+            <input type="email" id="mail" placeholder="Enter Your Email" required>
+            
+        </br>
+    </br>
+            <input type="password" id="pass1" onkeyup="validate()" placeholder="Enter Your Password" required pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[!@#$%^&*+`~'=?\|\]\[\(\)\-<>/]).{7,}">
+            <span id="passss"></span>
+
+            <input type="password" id="pass2" placeholder="Confirm Your Password" required >
+            
+</br>
+</br>
+
+            <input class="btn" type= "reset" value="Reset">
+            <input class="btn" id="but" type="submit" value="Submit" onclick="check()">
+        </br>
+    </br>
+            <ul>
+                <li id="length">At least 7 characters</li>
+                <li id="upper">At least 1 Capital letter</li>
+                <li id="number">At least 1 Number</li>
+                <li id="special">At least 1 Special characters</li>
+
+            </ul>
+        </br>
+        
+
+        </form>
+        
+
+        </div>
+
+        
+
+        <script src="check.js"></script>
+    </body>
+</html>
